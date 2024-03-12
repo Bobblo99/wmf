@@ -1,9 +1,29 @@
 import Image from "next/image";
 import { Inter } from "next/font/google";
+import { createClient } from "contentful";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export default function Home() {
+export async function getServerSideProps() {
+  const client = createClient({
+    space: process.env.CONTENTFUL_SPACE_ID,
+    accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+  });
+
+  const res = await client.getEntries({ content_type: "jobs" });
+  console.log("hallo", res.items);
+
+  // Stelle sicher, dass du die Daten unter einem spezifischen Schlüssel in props zurückgibst
+  return {
+    props: {
+      jobs: res.items // Benenne die Eigenschaft entsprechend
+    }
+  }
+}
+
+export default function Home({jobs}) { // Destruturiere die props korrekt
+  console.log(jobs); // Jetzt sollte dies die erwarteten Daten anzeigen
+
   return (
     <main
       className={`flex min-h-screen flex-col items-center justify-between p-24 ${inter.className}`}
