@@ -4,6 +4,6 @@ interface MainProps {
   }
 export default function Main({children}: MainProps) {
   return (
-    <main className="bg-backgroundColor flex min-h-screen flex-col items-center justify-between p-16 dark:bg-bgDark">{children}</main>
+    <main className="bg-white flex min-h-screen flex-col items-center justify-between p-16 dark:bg-bgDark">{children}</main>
   )
 }

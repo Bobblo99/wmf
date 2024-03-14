@@ -1,6 +1,6 @@
 const ContactCard = ({ name, role, phone, email, imageSrc }: IContactCard) => {
   return (
-    <div className=" bg-white p-6 shadow-lg dark:bg-gray-800 w-80">
+    <div className=" bg-backgroundColor p-6 shadow-[0_3px_10px_rgb(0,0,0,0.2)] dark:bg-gray-800 w-80">
       <div className="mb-4 flex items-center space-x-6">
         <img
           className="h-24 w-24 rounded-full object-cover object-center"

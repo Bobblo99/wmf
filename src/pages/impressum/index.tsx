@@ -1,18 +1,14 @@
-"use client"
-
 import Header from "../../../components/header"
-
-// @refresh reset
+import Main from "../../../components/mainContainer"
 
 export default function Impressum() {
   return (
     <>
-      <main className="flex min-h-screen flex-col items-center justify-between bg-white p-16 dark:bg-bgDark dark:text-white">
-        <div className="container mx-auto grid grid-cols-1 grid-rows-1 gap-10">
+      <Main>
+        <div className="container mx-auto grid grid-cols-1 grid-rows-1 gap-10 text-gray-800 dark:text-gray-300">
           <Header displayText="Impressum" />
 
           <div className="mx-auto flex max-w-md flex-col items-center break-words text-center">
-
             <h2 className="mb-2 text-xl font-semibold">
               Angaben gemäß § 5 TMG:
             </h2>
@@ -66,7 +62,8 @@ export default function Impressum() {
 
             <p className="mt-8">
               Quelle:{" "}
-              <a className="text-blue-800 underline dark:text-blue-800 hover:text-blue-900"
+              <a
+                className="text-blue-800 underline hover:text-blue-900 dark:text-blue-800"
                 href="https://www.e-recht24.de"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -76,7 +73,7 @@ export default function Impressum() {
             </p>
           </div>
         </div>
-      </main>
+      </Main>
     </>
   )
 }

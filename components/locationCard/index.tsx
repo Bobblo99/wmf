@@ -2,7 +2,7 @@ import React from "react";
 
 const LocationCard = () => {
   return (
-    <div className="bg-white shadow-lg  p-6 dark:bg-gray-800 text-center">
+    <div className="bg-backgroundColor shadow-[0_3px_10px_rgb(0,0,0,0.2)]  p-6 dark:bg-gray-800 text-center">
       <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Unser Standort:</h2>
       <p className="text-gray-800 dark:text-gray-300">
         Weißlensburger Str. 6<br />

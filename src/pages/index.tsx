@@ -27,17 +27,40 @@ interface ImagesInterface {
 export default function Home() {
   const imageData: ImagesInterface[] = [
     {
+      src: "/Formenbau/Form1.jpg",
+      alt: "image4",
+      link: "",
+    },
+    {
+      src: "/Formenbau/Form2.jpg",
+      alt: "image2",
+      link: "",
+    },
+    {
+      src: "/Formenbau/Form3.jpg",
+      alt: "image3",
+      link: "",
+    },
+    {
+      src: "/maps.jpg",
+      alt: "image5",
+      link: "/location",
+    },
+  ]
+
+  const carouselImage: ImagesInterface[] = [
+    {
       src: "/test4.jpg",
       alt: "image4",
       link: "",
     },
     {
-      src: "/test.jpg",
+      src: "/test2.jpg",
       alt: "image2",
       link: "",
     },
     {
-      src: "/test2.jpg",
+      src: "/test3.jpg",
       alt: "image3",
       link: "",
     },
@@ -53,7 +76,7 @@ export default function Home() {
       <div className=" container mx-auto grid grid-cols-1 grid-rows-1 gap-10">
         {/* <Header displayText="Startseite" /> */}
         <div>
-          <Carousel data={imageData} />
+          <Carousel data={carouselImage} />
         </div>
 
         <div className="flex flex-wrap">
